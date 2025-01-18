@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mermaid Tree Visualization</title>
+    <!-- Include Mermaid.js -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        
+        mermaid.initialize({
+            startOnLoad: true
+        });
+    </script>
+</head>
+<body>
+    <div class="mermaid">
+        graph TD
+    %% Enhanced Styling
+    classDef foundation fill:#e3f2fd,stroke:#1565c0,color:#000000,font-weight:bold
+    classDef programming fill:#f3e5f5,stroke:#6a1b9a,color:#000000,font-weight:bold
+    classDef infra fill:#e8f5e9,stroke:#2e7d32,color:#000000,font-weight:bold
+    classDef cloud fill:#fff3e0,stroke:#ef6c00,color:#000000,font-weight:bold
+    classDef containers fill:#fce4ec,stroke:#c2185b,color:#000000,font-weight:bold
+    classDef automation fill:#f1f8e9,stroke:#558b2f,color:#000000,font-weight:bold
+    classDef monitoring fill:#e0f7fa,stroke:#00838f,color:#000000,font-weight:bold
+    classDef security fill:#ffebee,stroke:#c62828,color:#000000,font-weight:bold
+    classDef projects fill:#e8eaf6,stroke:#283593,color:#000000,font-weight:bold
+
+    Start[/"DevOps Learning Journey"\]
+
+    %% Foundation Section with Enhanced Detail
+    subgraph Foundation["1. Foundation Skills"]
+        Git["Git & Version Control<br/>• Advanced Git Flow & Branching Strategies<br/>• Git Hooks & Large File Storage (LFS)<br/>• Security Best Practices & Signing<br/>• GitHub Actions & Advanced Workflows<br/>• GitLab CI/CD & Runner Management<br/>• Branch Protection & Access Control<br/>• Code Review & Collaboration Process<br/>• Merge/Rebase Strategies<br/>• Git Internals & Performance<br/>• Monorepo Management"]
+        
+        Linux["Linux Administration<br/>• System Architecture & Boot Process<br/>• Advanced Shell Scripting & Automation<br/>• Process & Service Management<br/>• Performance Tuning & Optimization<br/>• Security Hardening & SELinux/AppArmor<br/>• Advanced Networking & Protocols<br/>• System Troubleshooting & Debugging<br/>• Package Management & Dependencies<br/>• Kernel Tuning & Customization<br/>• Disk Management & File Systems"]
+        
+        Networking["Network Engineering<br/>• TCP/IP Stack & Protocol Analysis<br/>• DNS Management & Architecture<br/>• Load Balancing Algorithms & Implementation<br/>• Firewall Rules & VPN Technologies<br/>• SSL/TLS Configuration & HTTPS Security<br/>• Network Security & Threat Prevention<br/>• Software-Defined Networking & VXLAN<br/>• Traffic Analysis & Optimization<br/>• Network Automation & APIs<br/>• High Availability Design"]
+    end
+
+    %% Programming Section with More Detail
+    subgraph Programming["2. Programming & Scripting"]
+        Python["Python Development<br/>• Advanced Python Features & Patterns<br/>• Cloud Provider SDKs (AWS/Azure/GCP)<br/>• RESTful & GraphQL API Development<br/>• Testing (Unit, Integration, E2E)<br/>• Infrastructure Automation Scripts<br/>• Data Processing & Analysis<br/>• Error Handling & Logging<br/>• Performance Optimization<br/>• Package Management & Distribution<br/>• Async Programming"]
+        
+        Shell["Shell Scripting Mastery<br/>• Advanced Bash & PowerShell<br/>• Text Processing & Regular Expressions<br/>• Task Automation & Scheduling<br/>• Error Handling & Debugging<br/>• Security Best Practices<br/>• Performance Optimization<br/>• Cross-Platform Scripting<br/>• Environment Management<br/>• Script Testing & Validation<br/>• Process Management"]
+        
+        IaC["Infrastructure as Code<br/>• Advanced Terraform Practices<br/>• AWS CloudFormation Templates<br/>• Pulumi & AWS CDK Implementation<br/>• IaC Best Practices & Patterns<br/>• State Management & Backend Config<br/>• Module Design & Development<br/>• Security & Compliance Controls<br/>• Testing Strategies<br/>• Version Control Integration<br/>• Documentation Standards"]
+    end
+
+    %% Infrastructure Section Expanded
+    subgraph Infrastructure["3. Infrastructure Management"]
+        Config["Configuration Management<br/>• Ansible Enterprise Features<br/>• Puppet Enterprise & Chef Automation<br/>• Salt Stack Advanced Features<br/>• Custom Module Development<br/>• Role-Based Architecture<br/>• Security Controls & Compliance<br/>• Scalable Design Patterns<br/>• Testing & Validation<br/>• Integration with CI/CD<br/>• Configuration Drift Detection"]
+        
+        Servers["Server Operations<br/>• High Availability Architecture<br/>• Advanced Load Balancing<br/>• Performance Optimization<br/>• Security Hardening Practices<br/>• Monitoring & Alerting Setup<br/>• Backup & Recovery Strategies<br/>• Disaster Recovery Planning<br/>• Capacity Planning<br/>• Automated Provisioning<br/>• Server Fleet Management"]
+        
+        Storage["Storage Solutions<br/>• Block Storage Management<br/>• Object Storage Systems<br/>• Distributed File Systems<br/>• Data Protection Strategies<br/>• Backup System Design<br/>• DR Solution Implementation<br/>• Performance Optimization<br/>• Storage Automation<br/>• Data Lifecycle Management<br/>• Cost Optimization"]
+    end
+
+    %% Containers Section Enhanced
+    subgraph Containers["4. Container Technologies"]
+        Docker["Docker Platform<br/>• Advanced Image Building<br/>• Multi-stage Build Optimization<br/>• Security Best Practices<br/>• Networking & DNS<br/>• Volume & Data Management<br/>• Docker Compose Advanced<br/>• Private Registry Management<br/>• Resource Control & Limits<br/>• Docker API & SDK Usage<br/>• Container Debugging"]
+        
+        Kubernetes["Kubernetes Advanced<br/>• Cluster Architecture Design<br/>• Advanced Deployments & Updates<br/>• StatefulSet Management<br/>• Security Policies & RBAC<br/>• Monitoring & Logging Stack<br/>• Advanced Helm Charts<br/>• Custom Operators Development<br/>• Auto-scaling Strategies<br/>• Network Policies<br/>• Resource Management"]
+        
+        ServiceMesh["Service Mesh Implementation<br/>• Istio Architecture & Features<br/>• Traffic Management & Routing<br/>• Security Policy Implementation<br/>• Observability & Tracing<br/>• Service Discovery Methods<br/>• Advanced Load Balancing<br/>• Resilience Patterns<br/>• Performance Optimization<br/>• Multi-cluster Setup<br/>• Mesh Federation"]
+    end
+
+    %% Cloud Section Detailed
+    subgraph Cloud["5. Cloud Platforms"]
+        AWS["AWS Platform Mastery<br/>• VPC Design & Transit Gateway<br/>• ECS/EKS Advanced Features<br/>• Lambda & Event Architecture<br/>• IAM & Security Controls<br/>• Cost Optimization Strategies<br/>• Well-Architected Framework<br/>• Multi-Region Design<br/>• Migration Strategies<br/>• Performance Optimization<br/>• Compliance Management"]
+        
+        Azure["Azure Services Advanced<br/>• Virtual Network Architecture<br/>• AKS & Function Apps<br/>• Identity & RBAC Management<br/>• Advanced Monitoring Tools<br/>• Cost Management Strategies<br/>• Architecture Best Practices<br/>• Disaster Recovery Solutions<br/>• Integration Services<br/>• Security Center Usage<br/>• Performance Tuning"]
+        
+        MultiCloud["Multi-Cloud Strategy<br/>• Cloud Migration Planning<br/>• Hybrid Cloud Solutions<br/>• Cost Management & Analysis<br/>• Cross-Cloud Security<br/>• DR & Backup Planning<br/>• Performance Optimization<br/>• Governance Framework<br/>• Compliance Management<br/>• Service Integration<br/>• Automation Strategy"]
+    end
+
+    %% Security Section Expanded
+    subgraph Security["6. Security & Compliance"]
+        SecOps["Security Operations<br/>• Advanced Threat Detection<br/>• Vulnerability Management<br/>• SIEM Implementation<br/>• Access Control Systems<br/>• Audit & Logging Strategy<br/>• Incident Response Plans<br/>• Compliance Frameworks<br/>• Security Architecture<br/>• Penetration Testing<br/>• Security Automation"]
+        
+        DevSecOps["DevSecOps Implementation<br/>• Security Testing Integration<br/>• SAST/DAST Implementation<br/>• Container Security Scanning<br/>• Secrets Management<br/>• Compliance Automation<br/>• Security Gates in CI/CD<br/>• Security Monitoring<br/>• Risk Assessment<br/>• Security Metrics<br/>• Training & Culture"]
+        
+        Tools["Security Tooling<br/>• SonarQube Enterprise Setup<br/>• HashiCorp Vault Advanced<br/>• Aqua Security Platform<br/>• Snyk Enterprise Integration<br/>• Compliance Tools Suite<br/>• WAF & RASP Setup<br/>• Scanner Integration<br/>• Tool Authentication<br/>• Automated Remediation<br/>• Reporting Systems"]
+    end
+
+    %% Observability Section Detailed
+    subgraph Observability["7. Observability"]
+        Metrics["Metrics & APM<br/>• Prometheus HA Setup<br/>• Advanced Grafana Dashboards<br/>• Custom Metrics Collection<br/>• Alert Manager Configuration<br/>• Performance KPI Design<br/>• SLO/SLA Tracking<br/>• System Optimization<br/>• Capacity Planning<br/>• Real-time Analytics<br/>• Historical Analysis"]
+        
+        Logs["Log Management<br/>• ELK Stack Enterprise<br/>• Fluentd & Vector Advanced<br/>• Log Analytics & Mining<br/>• Query Optimization<br/>• Retention Strategies<br/>• Security Log Analysis<br/>• Integration Patterns<br/>• Log Aggregation<br/>• Parsing & Filtering<br/>• Compliance Logging"]
+        
+        Trace["Distributed Tracing<br/>• Jaeger Implementation<br/>• OpenTelemetry Integration<br/>• Trace Analysis Methods<br/>• Performance Visualization<br/>• Error Tracking Systems<br/>• Service Integration<br/>• Trace Visualization<br/>• Sampling Strategies<br/>• Context Propagation<br/>• Trace Analytics"]
+    end
+
+    %% Projects Section Enhanced
+    subgraph Projects["8. Real-World Projects"]
+        CICD["Enterprise CI/CD Pipeline<br/>• Multi-Stage Pipeline Design<br/>• Security Gate Integration<br/>• Quality Check Automation<br/>• Automated Deployment<br/>• Monitoring Integration<br/>• Rollback Mechanisms<br/>• Documentation Systems<br/>• Performance Testing<br/>• Approval Workflows<br/>• Metrics Collection"]
+        
+        Micro["Microservices Platform<br/>• Service Mesh Architecture<br/>• API Gateway Implementation<br/>• Data Service Design<br/>• Monitoring Strategy<br/>• Security Architecture<br/>• Scaling Mechanisms<br/>• Performance Optimization<br/>• Service Discovery<br/>• Circuit Breaking<br/>• Deployment Patterns"]
+        
+        CloudNative["Cloud-Native Application<br/>• Serverless Architecture<br/>• Auto-scaling Implementation<br/>• Multi-Region Deployment<br/>• DR Strategy Design<br/>• Security Model Implementation<br/>• Cost Control Methods<br/>• Monitoring Setup<br/>• Cache Strategies<br/>• API Design<br/>• Performance Testing"]
+    end
+
+    %% Flow Definition
+    Start --> Foundation
+    Foundation --> Programming
+    Programming --> Infrastructure
+    Infrastructure --> Containers
+    Containers --> Cloud
+    Cloud --> Security
+    Security --> Observability
+    Observability --> Projects
+
+    %% Style Application
+    class Foundation,Git,Linux,Networking foundation
+    class Programming,Python,Shell,IaC programming
+    class Infrastructure,Config,Servers,Storage infra
+    class Containers,Docker,Kubernetes,ServiceMesh containers
+    class Cloud,AWS,Azure,MultiCloud cloud
+    class Security,SecOps,DevSecOps,Tools security
+    class Observability,Metrics,Logs,Trace monitoring
+    class Projects,CICD,Micro,CloudNative projects
+    </div>
+</body>
+</html>
